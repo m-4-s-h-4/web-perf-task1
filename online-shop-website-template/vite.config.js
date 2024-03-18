@@ -21,9 +21,19 @@ export default defineConfig({
       },
     }),
     terser({
-      compress: {
-        drop_console: true,
-      },
-    }),
-  ],
-});
+        compress: {
+          drop_console: true,
+        },
+      }),
+      createHtmlPlugin({
+        minify: true, 
+      }),
+      createHtmlPlugin({
+        minify: {
+          collapseWhitespace: true,
+          removeComments: true,
+          removeRedundantAttributes: true,
+        },
+      }),
+    ],
+  });
