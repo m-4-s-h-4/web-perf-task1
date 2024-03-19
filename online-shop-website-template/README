@@ -1,0 +1,10 @@
+- Vite added
+- Used CDN
+- Added `brotliCompress`
+- Images are optimized using `vite-plugin-imagemin`, reducing file sizes for faster loading.
+- JavaScript files are minified using `rollup-plugin-terser`, decreasing load times by removing unnecessary characters and variables.
+- For HTML files minification with `vite-plugin-html`, reducing file size by eliminating whitespace and comments.
+- Asset bundling and code splitting in Vite improve initial loading times by breaking code into smaller, load-on-demand chunks
+- Minification typically removes `console.log` and `debugger`
+- Lazy loading is implemented in HTML for all images.
+- The `defer` attribute is used for scripts that don't need to execute immediately after being fetched, reducing render-blocking behavior.
