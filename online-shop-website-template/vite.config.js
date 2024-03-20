@@ -3,9 +3,12 @@ import viteImagemin from 'vite-plugin-imagemin';
 import { terser } from 'rollup-plugin-terser';
 import { createHtmlPlugin } from 'vite-plugin-html';
 import viteCompression from 'vite-plugin-compression';
+import cssnanoPlugin from 'cssnano';
+
 
 export default defineConfig({
   plugins: [
+    cssnanoPlugin(),
     viteImagemin({
       mozjpeg: {
         quality: 80,
